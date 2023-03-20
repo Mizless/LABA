@@ -1,0 +1,32 @@
+html {
+  font-size: 200px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 100px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.errorMessage {
+    color: red;
+    font-size: 100px;
+}
+
+.textBoxStyle {
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 100px;
+}
+body {
+    background-color: red;
+}
+

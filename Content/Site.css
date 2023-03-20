@@ -1,0 +1,24 @@
+.errorMessage {
+    color: green;
+}
+
+.textBoxStyle {
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 20px;
+}
+
+h1 {
+    color: red;
+}
+.operator {
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 20px;
+}
+
+body {
+    line-height: 1;
+    position: relative;
+    text-align: center;
+}

@@ -1,0 +1,49 @@
+﻿@model CalculatorViewModel
+
+@{
+    ViewBag.Title = "Laboratory work №1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h2>Калькулятор</h2>
+
+    @using (Html.BeginForm("Calculate", "Home", FormMethod.Post))
+    {
+        @Html.LabelFor(m => m.FirstOperand)
+        @Html.TextBoxFor(m => m.FirstOperand, new { @class = "textBoxStyle" })
+        @Html.ValidationMessageFor(m => m.FirstOperand, "", new { @class = "errorMessage" })
+ 
+        <br />
+
+        @Html.LabelFor(m => m.Operator)
+        @Html.DropDownListFor(m => m.Operator, new SelectList(Model.Operators), new { @class = "operator" })
+        <br />
+
+        @Html.LabelFor(m => m.SecondOperand)
+        @Html.TextBoxFor(m => m.SecondOperand, new { @class = "textBoxStyle" })
+        @Html.ValidationMessageFor(m => m.SecondOperand, "", new { @class = "errorMessage" })
+        <br />
+
+        <input type="submit" name="submitButton" value="Calculate" />
+        <input type="submit" name="submitButton" value="Clear" onclick="clearFields()" />
+
+        <br />
+
+        <label>Result: @Html.DisplayFor(m => m.Result)</label>
+
+        @if (ViewBag.TargetResult == Model.Result)
+        {
+            <p>Вы достигли нужного результата!</p>
+        }
+        else
+        {
+            <p>Попробуйте еще, нужный результат: @ViewBag.TargetResult.</p>
+        }
+    }
+    <script>
+    function clearFields() {
+        document.getElementById("FirstOperand").value = 0;
+        document.getElementById("SecondOperand").value = 0;
+    }
+    </script>
+
