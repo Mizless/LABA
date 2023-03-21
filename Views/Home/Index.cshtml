@@ -5,6 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@section content {
     <h2>Калькулятор</h2>
 
     @using (Html.BeginForm("Calculate", "Home", FormMethod.Post))
@@ -12,11 +13,10 @@
         @Html.LabelFor(m => m.FirstOperand)
         @Html.TextBoxFor(m => m.FirstOperand, new { @class = "textBoxStyle" })
         @Html.ValidationMessageFor(m => m.FirstOperand, "", new { @class = "errorMessage" })
- 
         <br />
 
         @Html.LabelFor(m => m.Operator)
-        @Html.DropDownListFor(m => m.Operator, new SelectList(Model.Operators), new { @class = "operator" })
+        @Html.DropDownListFor(m => m.Operator, new SelectList(Model.Operators), new { @class = "operator"})
         <br />
 
         @Html.LabelFor(m => m.SecondOperand)
@@ -39,6 +39,7 @@
         {
             <p>Попробуйте еще, нужный результат: @ViewBag.TargetResult.</p>
         }
+        @Html.ActionLink("Ссылка на ваше уравнение", "Result")
     }
     <script>
     function clearFields() {
@@ -47,3 +48,23 @@
     }
     </script>
 
+    <style>
+
+    .errorMessage {color: red;}
+    h1   {color: blue;}
+    .textBoxStyle {
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 20px;}
+    .operator {
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 20px;
+    }
+    body {
+   line-height: 1;
+   position: relative;
+   text-align: center;
+}
+    </style>
+}

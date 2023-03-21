@@ -245,3 +245,4 @@ F:\Projects\C# LABS\LABA\LABA\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Dr
 F:\Projects\C# LABS\LABA\LABA\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 F:\Projects\C# LABS\LABA\LABA\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 F:\Projects\C# LABS\LABA\LABA\obj\Debug\net6.0\LABA.csproj.CopyComplete
+F:\Projects\C# LABS\LABA\LABA\bin\Debug\net6.0\RestSharp.dll
